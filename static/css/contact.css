@@ -6,6 +6,9 @@
 
 body {
     margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
 }
 
 header {
@@ -80,5 +83,72 @@ nav a:before {
     margin-top: 6px;
     float: left;
     margin: 10px;
+}
 
+.contact-form {
+    margin-top: 90px;
+    padding: 5px;
+    width: 75%;
+    height: 75%;
+    transform: translateX(25%);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    contain: strict;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
+}
+
+
+form {
+
+}
+
+
+.form-control {
+
+    padding: 20px;
+    margin: 10px;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.sizeable-control {
+    padding: 20px;
+    margin: 10px;
+    min-height: 100px;
+    min-width: 200px;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.sidebar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin-left: 300px;
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.sidebar ul {
+    list-style: none; 
+    margin: 5px;
+    text-align: left;
+    display: block;
+}
+
+.sidebar li {
+    
+}
+
+.sidebar img {
+    width: 30px;
+}
+
+.maps iframe {
+    margin-top: 10px;
+    width: 400px;
+    height: 300px;
 }

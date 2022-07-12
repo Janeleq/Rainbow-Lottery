@@ -5,9 +5,7 @@ from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
-from flask_mail import Mail, Message
 
-#initialise database
 app = Flask(__name__)
 
 db = SQLAlchemy(app)
@@ -63,14 +61,7 @@ def contact():
         email_subject = request.form.get("email-subject")
         message = request.form.get("message")
 
-        msg = Message(email_subject, sender = "janelim2001@gmail.com", recipients = [email])
-        msg.body = message
-        mail.send(msg)
-        success = "Hi" + name + ", your message is sent"
-
-        return render_template("result.html", success=success)
     return render_template("contact.html")
-
 
 @app.route("/thanks")
 def thanks():
