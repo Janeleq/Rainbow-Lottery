@@ -71,6 +71,11 @@ def contact():
         return render_template("result.html", success=success)
     return render_template("contact.html")
 
+
+@app.route("/thanks")
+def about():
+    return render_template('thanks.html')
+
 @app.route("/login", methods=["POST", "GET"])
 def login():
     form = LoginForm()
