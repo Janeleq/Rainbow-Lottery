@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css')}}">
+      <script src=""></script>
+    {% endblock %}
+</head>
+<body>
+  <header>
+    <h1>Rainbow Lottery</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+    <div class="time">         
+      <span id="day">00</span>
+      <span>,</span>
+      <span id="hours">00</span>
+      <span>:</span>
+      <span id="minutes">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+      <span id="session">AM</span>
+    </div>
+      <script type="text/javascript">
+        function rtclock() 
+        {
+          var dateTime = new Date();
+
+          var arr_days = ['Sunday', 'Monday', 'Tuesday',
+          'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+          var myday = dateTime.getDay();
+          var day = arr_days[myday];
+          var hrs = dateTime.getHours();
+          var min = dateTime.getMinutes();
+          var sec = dateTime.getSeconds();
+          var session = document.getElementById('session');
+
+          if (hrs >= 12)
+          {
+              session.innerHTML = 'PM';
+          }
+          
+          else
+          {
+              session.innerHTML = 'AM';
+          }
+
+          if (hrs > 12)
+          {
+            hrs = hrs - 12;
+          }
+
+          if (min < 10)
+          {
+            min = "0" + min;
+          }
+
+          if (sec < 10)
+          {
+            sec = "0" + sec;
+          }
+
+          document.getElementById('day').innerHTML = day;
+          document.getElementById('hours').innerHTML = hrs;
+          document.getElementById('minutes').innerHTML = min;
+          document.getElementById('seconds').innerHTML = sec; 
+          }
+        setInterval(rtclock, 10);
+    </script>    
+  </header>
+  <div class="circle">
+      <h2>Our Team</h2>
+      <h3>Rainbow lottery is run by a sole owner named Jane Lim.</h3>
+      <div class="container">
+        <div class="imgBox">
+          <img src="../static/css/images/bingo.jpg" class="choosen">
+        </div>
+        <ul class="games">
+          <li><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');changeBackgroundColor('pink')"></li>
+          <li><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');changeBackgroundColor('aliceblue')"></li>
+        </ul>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    function imgSlider(anything)
+    {
+      document.querySelector('.choosen').src = anything;
+    }
+
+    function changeBackgroundColor(color)
+    {
+      const circle = document.querySelector('.container');
+      circle.style.background = color;
+    }
+  </script>
+</body>
+</html>

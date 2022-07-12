@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Lottery Game{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css')}}">
+</head>
+<body>
+  <h1>Welcome to the GAMEEEE</h1>
+
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <strong><p class =name> {{ message }} </p></strong>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  
+  <a href="{{url_for('logout')}}">Press here to logout</a>
+
+  <div class="container">
+    <input type="text" id="num-one">
+    <input type="text" id="num-two">
+    <input type="text" id="num-three">
+    <input type="text" id="num-four">
+    <input type="button" id="btn" value="Draw a Lot">
+  </div>
+
+
+</body>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='script/script.js')}}">
+    alert("This page has loaded sucessfully.")
+  </script>
+</html>
+
+
+

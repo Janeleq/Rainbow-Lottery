@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+    {% endblock %}
+</head>
+
+<body onload="">
+    {% block body %}  
+      <header>
+        <nav>
+          <ul>
+            <a href="{{url_for('about')}}">About</a></li>
+            <a href="{{url_for('contact')}}">Contact Us</a></li>
+            <a href="{{url_for('login')}}">Login</a></li>
+          </ul>
+          <hr>
+        </nav>
+        <div class="time">          
+          <span id="day">00</span>
+          <span>,</span>
+          <span id="hours">00</span>
+          <span>:</span>
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+          <span id="session">AM</span>
+          <hr>
+        </div>
+
+          <script type="text/javascript">
+            function rtclock() 
+            {
+              var dateTime = new Date();
+
+              var arr_days = ['Sunday', 'Monday', 'Tuesday',
+              'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+              var myday = dateTime.getDay();
+              var day = arr_days[myday];
+              var hrs = dateTime.getHours();
+              var min = dateTime.getMinutes();
+              var sec = dateTime.getSeconds();
+              var session = document.getElementById('session');
+
+              if (hrs >= 12)
+              {
+                  session.innerHTML = 'PM';
+              }
+              
+              else
+              {
+                  session.innerHTML = 'AM';
+              }
+
+              if (hrs > 12)
+              {
+                hrs = hrs - 12;
+              }
+
+              if (min < 10)
+              {
+                min = "0" + min;
+              }
+
+              if (sec < 10)
+              {
+                sec = "0" + sec;
+              }
+
+              document.getElementById('day').innerHTML = day;
+              document.getElementById('hours').innerHTML = hrs;
+              document.getElementById('minutes').innerHTML = min;
+              document.getElementById('seconds').innerHTML = sec; 
+              }
+            setInterval(rtclock, 10);
+        </script>
+      </header>
+
+      <div class="content">
+        <div class="container">
+          <h2>
+            R <span>A </span>I <span>N </span>B <span>O </span>W 
+            <br>
+            L <span>O </span>T <span>T </span>E <span>R </span>Y
+          </h2>
+          <img src="../static/css/images/lottery.png">
+        </div> 
+      </div>
+    {% endblock %}
+</body>
+</html>

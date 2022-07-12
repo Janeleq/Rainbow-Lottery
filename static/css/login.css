@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
+    top: 0;
+    bottom: 0;
+    border-style: solid;
+    border-color: #444;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header > h1 {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    font-size: 25px;
+    float: left;
+    margin: 10px;
+}
+
+
+.error { 
+    background-color: rgb(223, 122, 122);
+    border-style: solid;
+    border-color: darkred;
+    font-weight: 350;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+
+.success-from-register {
+    background-color: rgb(75, 134, 115);
+    border-color: rgb(77, 160, 109);
+    border-style: solid;
+    font-weight: 350;
+    padding: 5px;
+}
+
+body, .info {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    font-weight: 500;
+    margin: 20 px;
+    position: relative;
+}
+
+nav a {
+    margin: 10px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover { 
+    color:whitesmoke;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0;
+    transition: all ease-in-out 200ms;
+}
+
+.time {
+    text-align: center;
+    margin-top: 6px;
+    float: left;
+    margin: 10px;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    top: -10%;
+    right: 40%;
+    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    /* transform: translateY(-50%); */
+    border-radius: 55%;
+}
+
+.forms-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head-picture {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.particulars {
+    width: 20%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
+}
+
+.username {
+    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.username > img {
+    margin-right: 8px;
+    width: 12%;
+}
+
+.password {
+    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.password > img {
+    margin-right: 8px;
+    width: 12%;
+}
+
+.register {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+
+.register a {
+    text-decoration: none;
+}
+
+.register a:hover {
+text-decoration: underline;
+}
+
+#username {
+    padding: 5px;
+}
+
+#password {
+    padding: 5px;
+}
