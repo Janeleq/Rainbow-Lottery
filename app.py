@@ -73,7 +73,7 @@ def contact():
 
 
 @app.route("/thanks")
-def about():
+def thanks():
     return render_template('thanks.html')
 
 @app.route("/login", methods=["POST", "GET"])
