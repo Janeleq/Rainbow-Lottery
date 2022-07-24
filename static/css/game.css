@@ -2,33 +2,52 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 12px;;
+  margin: 12px;
+  height: 100%;
 }
 
-.banner {
-    display: flex;
-  }
-  
-  .left-column, .right-column {
-    flex-basis: 50%;
-  }
-  
-  .left-column img {
-    width: 100%;
-  
-  }
-  
-  .right-column img {
-    width: 100%
-  }
-  
-  .games li {
-    list-style: none;
-  }
+.container {
 
-  .games img{
-    width: 170px;
+}
+  
+.game-mode {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.bingo {
+  flex: 50%;
+  border-style: solid;
+  border-color: black;
+}
+
+.fourD {
+  flex: 50%;
+  border-style: solid;
+  border-color: black;
+}
+
+.game-mode .bingo img{
+  width: 200px;
+}
+
+.game-mode .fourD img{
+  width: 80px;
+}
+
+/* Responsive layout - makes a one column layout (100%) instead of a two-column layout (50%) */
+@media (max-width: 800px) 
+{
+  .bingo, .fourD {
+    flex: 100%;
   }
+}

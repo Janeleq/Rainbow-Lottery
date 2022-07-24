@@ -17,6 +17,7 @@ header {
     bottom: 0;
     border-style: solid;
     border-color: #444;
+    border-width: 2px;
 }
 
 header::after {

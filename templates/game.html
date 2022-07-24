@@ -23,14 +23,16 @@
   <div class="container">
     <h2>Choose a Game Mode:</h2>
     <div class="game-mode">
-      <ul class="games">
-        <li><a href="{{url_for('bingo_game')}}"><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');changeBackgroundColor('pink')"></a></li>
-        <li><a href="{{url_for('fourD_game')}}"><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');changeBackgroundColor('aliceblue')"></a></li>
-      </ul>
+      <div class="bingo">
+        <a class="bingo-img" href="{{url_for('bingo_game')}}"><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');"></a>
+        <p>Also known as lotto, each player has a card with numbers on. Randomised numbers will be called out, and if you are the first person to have all your numbers called out, you win the game.</p>
+      </div>
+      <div class="fourD">
+        <a class="fourD-img" href="{{url_for('fourD_game')}}"><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');"></a>
+        <p>A game where you an intending participant has to draw/guess a 4-digit number selected from 0000 to 9999. The correct matching of the 4-digit number means you win.</p>
+      </div>
     </div>
   </div>
-
-
 </body>
 
   <script type="text/javascript" src="{{ url_for('static', filename='script/script.js')}}">

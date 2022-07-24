@@ -122,7 +122,7 @@ nav a:before {
     top: -10%;
     right: 40%;
     background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
-    /* transform: translateY(-50%); */
+    transform: translateY(-50%);
     border-radius: 55%;
 }
 
@@ -156,12 +156,16 @@ form {
 }
 
 .username {
-    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    /* background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240)); */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin-bottom: 15px;
+    border-style: groove;
+    border-color: #000;
+    border-width: 2px;
 }
 
 .username > img {
@@ -170,11 +174,15 @@ form {
 }
 
 .password {
-    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    /* background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240)); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    border-style: groove;
+    border-color: #000;
+    border-width: 2px;
 }
 
 .password > img {

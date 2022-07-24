@@ -5,7 +5,7 @@
 }
 
 header {
-    background: linear-gradient(rgb(233, 182, 127), rgb(153, 183, 228), rgb(182, 226, 182));
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     top: 0;
     bottom: 0;
     border-style: solid;
@@ -111,7 +111,7 @@ nav a:before {
     height: 2000px;
     top: -10%;
     right: 40%;
-    background: linear-gradient(-55deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    background: linear-gradient(-100deg, pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
     /* transform: translateY(-50%); */
     border-radius: 55%;
 }
@@ -141,18 +141,21 @@ form {
     width: 20%;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #d1d8db;
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     text-align: center;
 }
 
 
 .username {
-    background-color: rgb(110, 119, 119);
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin-bottom: 15px;
+    border-style: groove;
+    border-color: #000;
+    border-width: 2px;
 }
 
 .username > img {
@@ -161,11 +164,14 @@ form {
 }
 
 .password {
-    background-color: rgb(110, 119, 119);
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    border-style: groove;
+    border-color: #000;
+    border-width: 2px;
 }
 
 .password > img {
