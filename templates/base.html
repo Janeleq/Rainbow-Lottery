@@ -63,6 +63,11 @@
                 hrs = hrs - 12;
               }
 
+              if (hrs == 0)
+              {
+                hrs = 12;
+              }
+
               if (min < 10)
               {
                 min = "0" + min;
@@ -77,6 +82,7 @@
               document.getElementById('hours').innerHTML = hrs;
               document.getElementById('minutes').innerHTML = min;
               document.getElementById('seconds').innerHTML = sec; 
+              // console.log(hrs);
               }
             setInterval(rtclock, 10);
         </script>

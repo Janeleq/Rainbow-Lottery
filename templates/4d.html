@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css')}}">
 </head>
 <body>
-  <h1>Welcome to the Game!</h1>
+  <h1>Welcome to the 4D Game!</h1>
+
 
   {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -21,19 +22,18 @@
   <a href="{{url_for('logout')}}">Press here to logout</a>
 
   <div class="container">
-    <h2>Choose a Game Mode:</h2>
-    <div class="game-mode">
-      <ul class="games">
-        <li><a href="{{url_for('bingo_game')}}"><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');changeBackgroundColor('pink')"></a></li>
-        <li><a href="{{url_for('fourD_game')}}"><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');changeBackgroundColor('aliceblue')"></a></li>
-      </ul>
-    </div>
+    <input type="text" id="num-one">
+    <input type="text" id="num-two">
+    <input type="text" id="num-three">
+    <input type="text" id="num-four">
+    <input type="button" id="btn" value="Draw a Lot">
   </div>
 
 
 </body>
 
   <script type="text/javascript" src="{{ url_for('static', filename='script/script.js')}}">
+
   </script>
 </html>
 

@@ -78,7 +78,6 @@ def login():
                 flash(user.username)
                 return redirect(url_for('game'))
 
-        
         flash('Unsucessful Login. Please try again')
     return render_template('login.html', form=form)
 
@@ -86,6 +85,16 @@ def login():
 @login_required
 def game():
     return render_template('game.html')
+
+@app.route("/bingo_game", methods=['GET', 'POST'])
+@login_required
+def bingo_game():
+    return render_template('bingo.html')
+
+@app.route("/fourD_game", methods=['GET', 'POST'])
+@login_required
+def fourD_game():
+    return render_template('4d.html')
 
 @app.route("/logout", methods=['GET', 'POST'])
 @login_required

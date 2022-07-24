@@ -78,13 +78,13 @@
         setInterval(rtclock, 10);
     </script>    
   </header>
-  <div class="circle">
+  <div class="container">
       <h2>Our Team</h2>
-      <h3>Rainbow lottery is run by a sole owner named Jane Lim.</h3>
+      <h3>Rainbow lottery is a game created by <i>Jane Lim</i> for fun.</h3>
+
+      <h2>Our Services</h2>
+      <h3>We namely provide two game services, Bingo and 4D.</h3>
       <div class="container">
-        <div class="imgBox">
-          <img src="../static/css/images/bingo.jpg" class="choosen">
-        </div>
         <ul class="games">
           <li><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');changeBackgroundColor('pink')"></li>
           <li><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');changeBackgroundColor('aliceblue')"></li>
@@ -100,7 +100,7 @@
 
     function changeBackgroundColor(color)
     {
-      const circle = document.querySelector('.container');
+      const circle = document.querySelector('.imgBox');
       circle.style.background = color;
     }
   </script>

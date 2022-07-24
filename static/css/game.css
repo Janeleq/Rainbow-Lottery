@@ -4,6 +4,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+  margin: 12px;;
+}
+
 .banner {
     display: flex;
   }
@@ -21,3 +25,10 @@
     width: 100%
   }
   
+  .games li {
+    list-style: none;
+  }
+
+  .games img{
+    width: 170px;
+  }
