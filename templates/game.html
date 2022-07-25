@@ -8,26 +8,28 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css')}}">
 </head>
 <body>
-  <h1>Welcome to the Game!</h1>
-
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      {% for message in messages %}
-        <strong><p class =name> {{ message }} </p></strong>
-      {% endfor %}
-    {% endif %}
-  {% endwith %}
+  
   
   <a href="{{url_for('logout')}}">Press here to logout</a>
 
   <div class="container">
+    <h1>Welcome to the Game!</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <strong><p class =name> {{ message }} </p></strong>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <h2>Choose a Game Mode:</h2>
     <div class="game-mode">
       <div class="bingo">
+        <h3>Bingo</h3>
         <a class="bingo-img" href="{{url_for('bingo_game')}}"><img src="../static/css/images/bingo.jpg" onmouseover="imgSlider('../static/css/images/bingo.jpg');"></a>
         <p>Also known as lotto, each player has a card with numbers on. Randomised numbers will be called out, and if you are the first person to have all your numbers called out, you win the game.</p>
       </div>
       <div class="fourD">
+        <h3>4D</h3>
         <a class="fourD-img" href="{{url_for('fourD_game')}}"><img src="../static/css/images/4d.png" onmouseover="imgSlider('../static/css/images/4d.png');"></a>
         <p>A game where you an intending participant has to draw/guess a 4-digit number selected from 0000 to 9999. The correct matching of the 4-digit number means you win.</p>
       </div>

@@ -8,8 +8,6 @@ header {
     background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     top: 0;
     bottom: 0;
-    border-style: solid;
-    border-color: #444;
 }
 
 header::after {
