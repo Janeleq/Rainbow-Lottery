@@ -9,8 +9,74 @@
 </head>
 <body>
   
-  
-  <a href="{{url_for('logout')}}">Press here to logout</a>
+  <header>
+    <nav>       
+        <span id="day">00</span>
+        <span>,</span>
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="session">AM</span>
+
+
+        <script type="text/javascript">
+          function rtclock() 
+          {
+            var dateTime = new Date();
+
+            var arr_days = ['Sunday', 'Monday', 'Tuesday',
+            'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            var myday = dateTime.getDay();
+            var day = arr_days[myday];
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            var session = document.getElementById('session');
+
+            if (hrs >= 12)
+            {
+                session.innerHTML = 'PM';
+            }
+            
+            else
+            {
+                session.innerHTML = 'AM';
+            }
+
+            if (hrs > 12)
+            {
+              hrs = hrs - 12;
+            }
+
+            if (hrs == 0)
+            {
+              hrs = 12;
+            }
+
+            if (min < 10)
+            {
+              min = "0" + min;
+            }
+
+            if (sec < 10)
+            {
+              sec = "0" + sec;
+            }
+
+            document.getElementById('day').innerHTML = day;
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = min;
+            document.getElementById('seconds').innerHTML = sec; 
+            // console.log(hrs);
+            }
+          setInterval(rtclock, 10);
+      </script>
+    </nav>
+    <a href="{{url_for('logout')}}">Press here to logout</a>
+  </header>
 
   <div class="container">
     <h1>Welcome to the Game!</h1>

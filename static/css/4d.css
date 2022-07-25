@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.container .game input[type=text] {
+    /* background-color: aquamarine; */
+    border-style: none;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: xx-large;
+    border-style: groove;
+}
+
+#num-one {
+    background-color: antiquewhite;
+}
+
+#num-two {
+    background-color: rgb(189, 176, 176);
+}
+
+#num-three {
+    background-color: rgb(179, 196, 146);
+}
+
+#num-four {
+    background-color: rgb(230, 215, 179);
+}
+
+.container input[type=button] {
+    margin-top: 8px;
+    border-style: none;
+    width: 10%;
+    height: 100px;
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+    border-style: solid;
+}
+
+.container input[type=label] {
+    border-style: solid;
+    text-align: center;
+    width: 10%;
+    align-self: center;
+    background-color: navajowhite;
+}
+
+@media screen and (max-width: 425px) {
+
+    .container .game input[type=button] {
+        width: fit-content;
+    }
+  }
+
+@media screen and (max-width: 320px) {
+
+    .container .game input[type=text] {
+        width: 20%;
+        height: 20%;
+    }
+}

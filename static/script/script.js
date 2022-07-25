@@ -3,6 +3,8 @@ const randomtwo = document.getElementById('num-two');
 const randomthree = document.getElementById('num-three');
 const randomfour = document.getElementById('num-four');
 const btn = document.getElementById('btn');
+const money = document.getElementById('money')
+const balance = document.getElementById('balance')
 
 btn.addEventListener('click', function(){
         numberone();
@@ -11,6 +13,9 @@ btn.addEventListener('click', function(){
         numberfour();
 })
 
+money.addEventListener('click', function(){
+    drawMoney();
+})
 
 
 function numberone(){
@@ -28,3 +33,8 @@ function numberthree(){
 function numberfour(){
     randomfour.value = Math.floor(Math.random() * 10);
 }
+
+function drawMoney(){
+    balance.value = Math.floor(Math.random() * 100);
+}
+

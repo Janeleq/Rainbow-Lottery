@@ -111,3 +111,12 @@ h2 span {
   text-align: center;
   padding-right: 36px;
 }
+
+
+@media screen and (max-width: 425px) {
+
+  .container {
+    margin-bottom: 0;
+  }
+  
+}

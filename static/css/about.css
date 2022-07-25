@@ -85,12 +85,35 @@ nav a:before {
     margin: 10px;
 }
 
-
 .container {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* box-sizing: border-box; */
 }
 
+
+h2 {
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+#services {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#team {
+    margin-bottom: 10px;
+}
 
 .games {
     display: flex;
