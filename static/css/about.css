@@ -95,8 +95,6 @@ nav a:before {
 }
 
 
-h2 {
-}
 
 h3 {
     margin: 0;
@@ -117,6 +115,11 @@ h3 {
 
 .games {
     display: flex;
+}
+
+.games ul {
+    display: flex;
+    padding-left: 0;
 }
 
 .games img {
