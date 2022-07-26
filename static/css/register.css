@@ -157,6 +157,7 @@ form {
 .username {
     background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     display: flex;
+    contain: content;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -174,6 +175,7 @@ form {
 .password {
     background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     display: flex;
+    contain: content;
     justify-content: center;
     align-items: center;
     padding: 10px;

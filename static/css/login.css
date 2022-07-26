@@ -172,6 +172,7 @@ form {
     border-style: groove;
     border-color: #000;
     border-width: 2px;
+    contain: content;
 }
 
 .username > img {
@@ -189,6 +190,7 @@ form {
     border-style: groove;
     border-color: #000;
     border-width: 2px;
+    contain: content;
 }
 
 .password > img {
