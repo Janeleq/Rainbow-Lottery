@@ -42,7 +42,7 @@ header > h1 {
 
 nav {
     float: right;
-    
+    /* width: 45%; */
 }
 
 nav ul {
@@ -90,6 +90,7 @@ nav a:before {
 
 .time {
     text-align: center;
+    width: 20%;
 }
 
 .container {
@@ -163,6 +164,8 @@ h3 {
     header h1 {
         font-size: 18px;
         margin-right: 0;
+        padding-right: 0;
+        
     }
     
     header ul{
@@ -170,8 +173,8 @@ h3 {
     }
   
     .time {
-        margin: 0;
-        font-size: 8px;
-        margin: 10px;
+        font-size: 10px;
+
+
     }
   }
