@@ -5,7 +5,7 @@
 }
 
 header {
-    background: linear-gradient(pink, rgb(181, 181, 235), rgb(171, 211, 171), rgb(235, 174, 174), rgb(228, 200, 150), rgb(168, 156, 156));
+    background: linear-gradient(rgb(154, 154, 216), rgb(171, 213, 240));
     bottom: 0;
     border-style: solid;
     border-color: #444;
@@ -108,7 +108,6 @@ nav a:before {
     margin-top: 6px;
     float: left;
     margin: 10px;
-
 }
 
 .container {
@@ -153,6 +152,8 @@ form {
 }
 
 .particulars {
+    display: flex;
+    flex-direction: column;
     width: 20%;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -209,7 +210,7 @@ form {
 }
 
 .register a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 #username {
@@ -218,6 +219,12 @@ text-decoration: underline;
 
 #password {
     padding: 5px;
+}
+
+#submit {
+    width: 30%;
+    text-align: center;
+    align-self: center;
 }
 
 @media screen and (max-width: 425px) {
