@@ -83,6 +83,9 @@ nav a:before {
 .content {
   display: grid;
   place-items: center;
+  width: 100%;
+  height: 85%;
+  margin-top: 20px;
 }
 
 .container {
@@ -90,8 +93,12 @@ nav a:before {
   border-radius: 5px;
   padding: 10px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: column;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -113,10 +120,32 @@ h2 span {
 }
 
 
+@media screen and (max-width: 768px) {
+  .container img {
+    width: 400px;
+  }
+  
+}
+
 @media screen and (max-width: 425px) {
 
+  .content {
+    margin: 0;
+  }
   .container {
-    margin-bottom: 0;
+    height: 85%;
+    width: 85%;
+    margin: 0;
+  }
+
+  .container img 
+  {
+    width: 300px;
+    padding-right: 15px;
+  }
+
+  .container h2 {
+    font-size: 50px;
   }
   
 }
