@@ -13,14 +13,6 @@
 <body onload="">
     {% block body %}  
       <header>
-        <nav>
-          <ul>
-            <a href="{{url_for('about')}}">About</a></li>
-            <a href="{{url_for('contact')}}">Contact Us</a></li>
-            <a href="{{url_for('login')}}">Login</a></li>
-          </ul>
-          <hr>
-        </nav>
         <div class="time">          
           <span id="day">00</span>
           <span>,</span>
@@ -30,8 +22,14 @@
           <span>:</span>
           <span id="seconds">00</span>
           <span id="session">AM</span>
-          <hr>
         </div>
+        <nav>
+          <ul>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+            <li><a href="{{url_for('login')}}">Login</a></li>
+          </ul>
+        </nav>
 
           <script type="text/javascript">
             function rtclock() 
