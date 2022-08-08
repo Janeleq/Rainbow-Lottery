@@ -1,4 +1,4 @@
-# Rainbow-Lottery
+# Rainbow-Lottery (WIP)
 ## Description
 A game website that allows simple user authentication and also some games to play.
 <br/>
